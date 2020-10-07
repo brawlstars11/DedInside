@@ -5,7 +5,7 @@ from telebot import types
 bot = telebot.TeleBot('1395724832:AAGQHm2vDrKKthXyAGBD_8svRFAFRZokXvs')
 TOKEN = "1395724832:AAGQHm2vDrKKthXyAGBD_8svRFAFRZokXvs"
 
-updater.bot.setWebhook('https://brawl11.herokuapp.com/' + TOKEN)
+bot.setWebhook('https://brawl11.herokuapp.com/' + TOKEN)
 
 @bot.message_handler(commands=['reg'])
 def start(message):
