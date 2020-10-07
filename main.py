@@ -5,12 +5,12 @@ from telebot import types
 bot = telebot.TeleBot('1395724832:AAGQHm2vDrKKthXyAGBD_8svRFAFRZokXvs')
 TOKEN = "1395724832:AAGQHm2vDrKKthXyAGBD_8svRFAFRZokXvs"
 
-bot.setWebhook('https://brawl11.herokuapp.com/' + TOKEN)
 
 @bot.message_handler(commands=['reg'])
 def start(message):
         bot.send_message(message.from_user.id, "Введите свой тег в Brawl Stars!")
         bot.register_next_step_handler(message, get_tag)
+
 
 
 def get_tag(message):
