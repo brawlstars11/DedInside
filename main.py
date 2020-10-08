@@ -5,7 +5,9 @@ import telebot
 import time
 
 from flask import request
-##from telebot import types
+
+from telebot import *
+
 bot = telebot.TeleBot('1395724832:AAGQHm2vDrKKthXyAGBD_8svRFAFRZokXvs')
 TOKEN = "1395724832:AAGQHm2vDrKKthXyAGBD_8svRFAFRZokXvs"
 
