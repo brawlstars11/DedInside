@@ -11,6 +11,9 @@ from telebot import *
 bot = telebot.TeleBot('1395724832:AAGQHm2vDrKKthXyAGBD_8svRFAFRZokXvs')
 TOKEN = "1395724832:AAGQHm2vDrKKthXyAGBD_8svRFAFRZokXvs"
 
+@bot.message_handler(commands=['start'])
+def start(message):
+        bot.send_message(message.from_user.id, "Для регистрации нажми /reg")
 
 @bot.message_handler(commands=['reg'])
 def start(message):
