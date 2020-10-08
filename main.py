@@ -8,8 +8,23 @@ from flask import request
 
 from telebot import *
 
+
 bot = telebot.TeleBot('1395724832:AAGQHm2vDrKKthXyAGBD_8svRFAFRZokXvs')
 TOKEN = "1395724832:AAGQHm2vDrKKthXyAGBD_8svRFAFRZokXvs"
+
+
+def listener(messages):
+    for m in messages:
+        ts = int(m.date)
+        ts2 = datetime.datetime.utcfromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+        if m.content_type == 'text':
+            print(str(m.chat.first_name) + " [" + str(m.chat.id) + "]" + " {" + str(ts2) + "}: " + m.text)
+            if m.chat.id != 632115333:
+                open('gavanalog.txt', 'a', encoding="utf-8").write(
+                    str(m.chat.first_name) + " [" + str(m.chat.id) + "]" + " {" + str(ts2) + "}: " + str(m.text) + "\n")
+
+
+bot.set_update_listener(listener)
 
 @bot.message_handler(commands=['start'])
 def start(message):
