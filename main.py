@@ -13,7 +13,7 @@ def start(message):
 
 @bot.message_handler(commands=['reg'])
 def start(message):
-        bot.send_message(message.from_user.id, "Введите свой тег в Brawl Stars!")
+        bot.send_message(message.from_user.id, "Введите свой тег в Brawl Stars! Пример: #xxxxxxx")
         bot.register_next_step_handler(message, get_tag)
 
 def get_tag(message):
@@ -51,16 +51,16 @@ def paid_command(message):
 @bot.message_handler(content_types=['text'])
 def send_text(message):
             if message.text.lower() == '170кр. - 320руб.':
-                bot.send_message(message.chat.id, 'Выбрано 170 кристаллов! Оплатите 320 рублей на KiWi кошелек: 380916236931.'
+                bot.send_message(message.chat.id, 'Выбрано 170 кристаллов! Оплатите 320 рублей на QiWi кошелек: 380916236931.'
                                                   ' После оплаты напишите в !первом сообщении номер транзакции и потом /paid')
             elif message.text.lower() == '360кр. - 550руб.':
-                bot.send_message(message.chat.id, 'Выбрано 360 кристаллов! Оплатите 550 рублей на KiWi кошелек: 380916236931.'
+                bot.send_message(message.chat.id, 'Выбрано 360 кристаллов! Оплатите 550 рублей на QiWi кошелек: 380916236931.'
                                                   ' После оплаты напишите в !первом сообщении номер транзакции и потом /paid')
             elif message.text.lower() == '950кр. - 1000руб.':
-                bot.send_message(message.chat.id, 'Выбрано 950 кристаллов! Оплатите 1000 рублей на KiWi кошелек: 380916236931.'
+                bot.send_message(message.chat.id, 'Выбрано 950 кристаллов! Оплатите 1000 рублей на QiWi кошелек: 380916236931.'
                                                   ' После оплаты напишите в !первом сообщении номер транзакции и потом /paid')
             elif message.text.lower() == '2000кр. - 2000руб.':
-                bot.send_message(message.chat.id, 'Выбрано 2000 кристаллов! Оплатите 2000 рублей на KiWi кошелек: 380916236931.'
+                bot.send_message(message.chat.id, 'Выбрано 2000 кристаллов! Оплатите 2000 рублей на QiWi кошелек: 380916236931.'
                                                   ' После оплаты напишите в !первом сообщении номер транзакции и потом /paid')
 
 bot.polling(none_stop=True, interval=0)
